@@ -1,0 +1,35 @@
+.footer {
+    background-color: #2f303a;
+}
+
+.address {
+    width: 231px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+            
+
+
+.address__link {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}    
+
+.address__link:focus,
+.address__link:hover {
+        color: var(--accent-color);
+                }
+  
+
+.address__link .map {
+    color: var(--button-text-color);
+   }
