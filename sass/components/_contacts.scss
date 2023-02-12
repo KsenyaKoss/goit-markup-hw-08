@@ -1,16 +1,14 @@
 .contacts {
-    display: none;
-}
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 
-@media screen and (min-width: 767px) {
-        
-    .contacts {
     display: flex;
     margin-left: auto;
     justify-content: center;
     align-content: center;
 
-      &__item + &__item {
+    &__item + &__item {
         margin-left: 50px;
         }
     }
@@ -48,5 +46,5 @@
     fill: var(--primary-text-color);
     } 
 
-   }
+
 

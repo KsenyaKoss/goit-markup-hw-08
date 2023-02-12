@@ -5,9 +5,16 @@
     --button-text-color: #ffffff;
     --primary-background-color: #fff;
     --secondary-background-color: #f5f4fa;
+
+
 }
 
 $phone: 480px;
 $tablet: 768px;
 $desktop: 1200px;
+
+    // indent for elements in grid (default value)
+    $indent: 30px;
+    // quantity of items in grid (degault value)
+    $items: 1;
 

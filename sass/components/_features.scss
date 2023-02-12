@@ -4,17 +4,16 @@
     flex-wrap: wrap;
 }
 
-.features__item {
-    width: 450px;
+.features__items {
+    flex-basis: 450px;
 
 @media screen and (min-width: $tablet) {
-    width: 354px;
+    flex-basis: 354px;
     }
 
 @media screen and (min-width: $desktop) {
-    width: 270px;
-    
-} 
+    $items: 270px;
+    } 
 } 
 
 
@@ -23,6 +22,7 @@
         width: 100%;
         height: 120px;
         padding: 0;
+        margin-bottom: 30px;
         border: none;
         background-color: var(--secondary-background-color);
         border-radius: 4px;

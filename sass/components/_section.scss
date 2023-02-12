@@ -5,6 +5,10 @@
 
 .works__section {
     padding-top: 0;
+
+    @media screen and (max-width: 1279px) {
+        display: none;
+        }
 }
 
 .team__section {

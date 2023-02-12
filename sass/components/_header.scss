@@ -2,4 +2,22 @@
     border-bottom: 1px solid #ececec;
 }
 
+// Menu-button
+.menu__header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-left: auto;
+
+@media screen and (min-width: 768px) {
+    display: none;
+    
+}
+}
 
