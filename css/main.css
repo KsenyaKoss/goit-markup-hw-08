@@ -39,7 +39,7 @@ p {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -144,6 +144,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
@@ -151,7 +152,25 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 70px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -220,11 +239,6 @@ body {
   outline: none;
 }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 .menu-toggle:hover .icon-close-menu,
 .menu-toggle:focus .icon-close-menu {
   fill: #2196F3;
@@ -236,6 +250,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 48px 40px;
   background-color: #fff;
   z-index: 999;
   -webkit-transform: translateX(100%);
@@ -261,11 +276,19 @@ body {
   list-style: none;
 }
 
-.mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
+.mobile-menu__link {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: --accent-color;
+}
+
+.mobile-menu .link:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .nav {
@@ -321,24 +344,31 @@ body {
   opacity: 1;
 }
 
-.contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
 @media screen and (max-width: 767px) {
   .contacts {
     display: none;
   }
 }
-.contacts__item + .contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding: 21px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .contacts__link {
@@ -346,12 +376,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 0;
+  margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   text-decoration: none;
   -webkit-box-align: center;
@@ -370,6 +400,26 @@ body {
 .contacts__link:hover .contacts__icon, .contacts__link:focus .contacts__icon {
   fill: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .contacts__link__item + .contacts__link__item {
+    margin-left: 50px;
+  }
+}
 
 .contacts__icon {
   fill: var(--primary-text-color);
@@ -382,8 +432,8 @@ body {
   margin-right: auto;
   outline: 1px solid var(--title-color);
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/BGI-hero.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BGI-hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bgimage/BGI-hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgimage/BGI-hero.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -482,6 +532,7 @@ body {
   width: 100%;
   height: 120px;
   padding: 0;
+  margin-bottom: 30px;
   border: none;
   background-color: var(--secondary-background-color);
   border-radius: 4px;
@@ -704,14 +755,18 @@ body {
 
 .address {
   width: 231px;
-  padding-top: 60px;
-  padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 780px) {
+  .address {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .address {
-    margin: 0;
+    text-align: left;
   }
 }
 
@@ -740,16 +795,15 @@ body {
   color: var(--button-text-color);
 }
 
-.footer-socials {
-  text-align: center;
+.socials {
+  width: 206px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media screen and (min-width: 768px) {
-  .footer-socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 93px;
-    padding-top: 72px;
+@media screen and (min-width: 1280px) {
+  .socials {
+    text-align: left;
   }
 }
 
@@ -758,8 +812,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .socials__title {
@@ -810,8 +865,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .sign-up {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sign-up {
+    text-align: left;
     margin-top: 0;
   }
 }
