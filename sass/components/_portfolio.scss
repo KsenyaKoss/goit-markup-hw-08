@@ -1,14 +1,29 @@
 
 .filters {
     display: flex;
+    gap: 8;
     margin-bottom: 50px;
     justify-content: center;
-  }
+
+    }
+
+
+    // margin-bottom: 40px;
+    // align-items: center;
+    // justify-content: flex-start;
+
+// @media screen and (min-width: 768px) {
+//     flex-wrap: nowrap;
+//     margin-bottom: 30px;
+//     justify-content: center;
   
-  .filters .item + .item {
-    margin-left: 8px;
-  }
+// }
+//  @media screen and (min-width: 1200px) {
+//     margin-bottom: 50px;
+//     justify-content: center;
+//  }
   
+
   .button {
     display: block;
     padding: 6px 22px;

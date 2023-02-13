@@ -16,8 +16,6 @@
     @media screen and (min-width: $desktop) {
        max-width: 1200px; 
     }
-
-    outline: 2px solid tomato;
     
 }
 
@@ -42,16 +40,14 @@
   padding-bottom: 60px;
  
 
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
 
- @media screen and (min-width:1200px) {
+ @media screen and (min-width: 1200px) {
     align-items: flex-start;
     justify-content: space-between;
     
