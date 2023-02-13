@@ -21,6 +21,9 @@
 
 
   .menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
     min-height: 40px;
     min-width: 40px;
     display: flex;
@@ -52,7 +55,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    // padding: 32px;
     background-color: #fff;
     z-index: 999;
     transform: translateX(100%);
