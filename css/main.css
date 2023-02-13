@@ -352,6 +352,7 @@ body {
 @media screen and (min-width: 768px) {
   .contacts {
     padding: 21px 0;
+    margin-left: 96px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -423,6 +424,20 @@ body {
 
 .contacts__icon {
   fill: var(--primary-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__icon.envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__icon.handy {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .hero {
