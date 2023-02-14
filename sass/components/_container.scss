@@ -1,5 +1,5 @@
 .container {
-    // phone screen
+  // phone screen
   min-width: 320px;
   max-width: 480px;
   padding-left: 15px;
@@ -7,30 +7,28 @@
   margin-left: auto;
   margin-right: auto;
 
-//   tablet screen
-    @media screen and (min-width: $tablet) {
-     max-width: 768px;
-    }
+  //   tablet screen
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+  }
 
-    // desctop screen
-    @media screen and (min-width: $desktop) {
-       max-width: 1200px; 
-    }
-    
+  // desctop screen
+  @media screen and (min-width: $desktop) {
+    max-width: 1200px;
+  }
 }
 
-.hero__container {
-    padding-top: 118px;
-    padding-bottom: 118px;
-    text-align: center;
+// .hero__container {
+//     padding-top: 118px;
+//     padding-bottom: 118px;
+//     text-align: center;
 
-    @media screen and (min-width: $desktop) {
-        padding-top: 200px;
-        padding-bottom: 200px;
-    }
+//     @media screen and (min-width: $desktop) {
+//         padding-top: 200px;
+//         padding-bottom: 200px;
+//     }
 
-}
-
+// }
 
 .footer__container {
   text-align: center;
@@ -38,32 +36,23 @@
   margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
- 
 
   @media screen and (min-width: 768px) {
     display: flex;
+    gap: 60px;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
-
- @media screen and (min-width: 1200px) {
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: space-between;
-    
- }
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
-
-
-
-
-
-
-
 
 .header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
 }

@@ -18,7 +18,6 @@
   &:focus .icon-close-menu {
     fill: var(--accent-color);
   }
-
 }
 
 .menu-container {
@@ -32,6 +31,9 @@
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-container.is-open {
@@ -42,7 +44,6 @@
   padding: 0;
   margin-top: 0;
   list-style: none;
-  margin-bottom: 302px;
 }
 
 .mobile-menu__item {
@@ -65,11 +66,7 @@
   color: var(--accent-color);
 }
 
-.contacts-menu a {
-  display: block;
-}
-
-.contacts__phone {
+.contacts-menu__item:first-child {
   font-weight: 500;
   font-size: 34px;
   line-height: calc(40 / 34);
@@ -78,7 +75,7 @@
   margin-bottom: 32px;
 }
 
-.contacts__mail {
+.contacts-menu__item:last-child {
   font-weight: 500;
   font-size: 24px;
   line-height: calc(28 / 24);
@@ -88,6 +85,7 @@
 
 .menu-socials {
   display: flex;
+  flex-wrap: wrap;
 }
 .menu-socials__item {
   padding: 0 10px;
