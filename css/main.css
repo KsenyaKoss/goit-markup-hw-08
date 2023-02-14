@@ -487,7 +487,7 @@ body {
 
 .hero {
   max-width: 767px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid var(--title-color);
@@ -517,6 +517,7 @@ body {
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1200px;
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-image/hero_desk@1x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-image/hero_desk@1x.jpg");
   }
@@ -639,11 +640,17 @@ body {
 }
 
 .features__title {
+  text-align: center;
   margin-bottom: 10px;
   color: var(--title-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__text {
@@ -1059,37 +1066,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 8;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-@media screen and (min-width: 768px) {
-  .filters {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    margin-bottom: 30px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .filters {
-    margin-bottom: 50px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.filters .item + .item {
-  margin-left: 8px;
+  margin-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button {
