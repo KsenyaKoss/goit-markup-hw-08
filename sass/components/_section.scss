@@ -1,16 +1,21 @@
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
 }
 
 .works__section {
-    padding-top: 0;
+  padding-top: 0;
 
-    @media screen and (max-width: 1279px) {
-        display: none;
-        }
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
 }
 
 .team__section {
-    background-color: var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
 }
