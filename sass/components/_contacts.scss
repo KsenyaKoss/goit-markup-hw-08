@@ -24,7 +24,6 @@
 .contacts__item {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 12px;
@@ -61,6 +60,10 @@
       margin-left: 50px;
     }
   }
+}
+
+.contacts__item:first-child {
+  margin-bottom: 10px;
 }
 
 .contacts__icon {
