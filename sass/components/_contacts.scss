@@ -35,6 +35,10 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  &:first-child {
+    margin-bottom: 10px;
+  }
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -56,14 +60,14 @@
     font-size: 14px;
     line-height: 1.14;
 
+    &:first-child {
+      margin-bottom: 0px;
+    }
+
     &__item + &__item {
       margin-left: 50px;
     }
   }
-}
-
-.contacts__item:first-child {
-  margin-bottom: 10px;
 }
 
 .contacts__icon {
