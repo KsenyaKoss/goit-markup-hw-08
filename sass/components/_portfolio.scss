@@ -55,20 +55,21 @@
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  flex-basis: 370px;
-}
+  @include card-set;
 
-.projects .poject {
-  width: 370px;
-  height: 404px;
-  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    @include card-set(2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include card-set(3);
+  }
 }
 
 .project-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   outline: transparent;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -130,6 +131,7 @@
 }
 
 .wrp-img {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

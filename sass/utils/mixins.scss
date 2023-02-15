@@ -1,0 +1,9 @@
+@mixin card-set($items: 1, $indent: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+
+  [class*='item'] {
+    flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+  }
+}
